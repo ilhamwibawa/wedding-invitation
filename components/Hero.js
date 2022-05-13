@@ -11,7 +11,10 @@ function Hero() {
           loop
           className="w-auto min-w-full min-h-full max-w-none"
         >
-          <source src="/assets/bg-dummy-video.webm" type="video/webm" />
+          <source
+            src="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/bg-dummy-video.webm"
+            type="video/webm"
+          />
         </video>
         <div className="absolute w-full h-full bg-[rgba(0,0,0,0.7)] top-0 left-0"></div>
       </div>

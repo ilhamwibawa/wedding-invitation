@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import useSound from "use-sound";
 
 function Intro() {
-  const [play, { stop }] = useSound("/assets/backsound.mp3");
+  const [play, { stop }] = useSound(
+    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/backsound.mp3"
+  );
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleClick = () => {
@@ -47,9 +49,10 @@ function Intro() {
   };
 
   const button = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0 },
     visible: {
       opacity: 1,
+      scale: 1,
       transition: {
         delay: 5,
         staggerChildren: 2,
@@ -113,6 +116,7 @@ function Intro() {
           animate="visible"
           className="bg-black p-3 mt-5 text-white flex items-center justify-center transition-all hover:border-white border-[1px] border-transparent cursor-pointer"
           onClick={handleClick}
+          whileTap={{ scale: 0.9 }}
         >
           Undangan buat kamu
         </motion.button>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import useSound from "use-sound";
 function Player() {
-  const [play, { stop }] = useSound("/assets/backsound.mp3");
+  const [play, { stop }] = useSound(
+    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/backsound.mp3"
+  );
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleClick = () => {
