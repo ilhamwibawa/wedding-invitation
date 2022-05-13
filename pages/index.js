@@ -24,6 +24,11 @@ export default function Home() {
         title="She's the one"
         desc="And in her smile, I see something more beautiful than the stars."
         url="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/BHM03951.JPG"
+        fullname="Yulian Rahmawati"
+        mother="Alm. Een Juendah"
+        father="Alm. Yayan Supriatna"
+        nickname="Kijul"
+        additional="Putri ke 3 dari"
       />
 
       <About
@@ -31,6 +36,11 @@ export default function Home() {
         title="He's the one"
         desc="She knew she loved him when 'home' went from being a place to being a person."
         url="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/BHM04117.JPG"
+        fullname="Ilham Mirwansyah W"
+        mother="Yani Yuningsih"
+        father="Hadiana Rusady"
+        nickname="Ilham"
+        additional="Putra ke 2 dari"
       />
 
       <Reservation />

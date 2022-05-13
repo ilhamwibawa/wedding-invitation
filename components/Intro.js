@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import useSound from "use-sound";
+import Image from "next/image";
 
 function Intro() {
   const [play, { stop }] = useSound(
@@ -78,7 +79,16 @@ function Intro() {
       animate={isOpen ? "visible" : "hidden"}
       className="fixed w-full h-screen bg-[#161513] left-0 top-0 z-50 overflow-hidden"
     >
-      <div className="flex flex-col w-full h-screen items-center justify-center px-5">
+      <div className="relative max-w-[600px] h-screen">
+        <Image
+          src="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/BHM03864.JPG"
+          layout="fill"
+          alt=""
+          className=" object-cover grayscale -z-10 opacity-60"
+        />
+        <div className="absolute h-full w-full bg-gradient-to-l from-[#161513] to-transparent top-0 left-0"></div>
+      </div>
+      <div className="absolute top-0 left-0 flex flex-col w-full h-screen items-center justify-center px-5">
         <motion.h3
           variants={sentence}
           initial="hidden"
