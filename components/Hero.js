@@ -9,6 +9,8 @@ function Hero() {
           muted
           playsInline
           loop
+          preload="yes"
+          poster="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/bg-mobile.jpg"
           className="w-auto min-w-full min-h-full max-w-none"
         >
           <source
