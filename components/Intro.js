@@ -28,7 +28,7 @@ function Intro() {
   const line2 = "Berita baik!";
   const line3 = "Ilham akhirnya nikahin Kijul :)";
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const sentence = {
     hidden: { opacity: 0 },
