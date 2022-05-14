@@ -1,14 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { useParallax } from "react-scroll-parallax";
+import DoubleImage from "./DoubleImage";
 
 function Quotes() {
   const surah = useParallax({
     speed: 10,
-  });
-
-  const image1 = useParallax({
-    speed: -15,
   });
 
   return (
@@ -24,26 +21,10 @@ function Quotes() {
             </h1>
             <p>- QS. Ar- Rum 21</p>
           </div>
-          <div className="relative z-20 xl:-top-32 xl:left-[150px] shadow-xl">
-            <Image
-              src="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/image-1.jpg"
-              alt=""
-              width={700}
-              height={800}
-              className="w-full object-cover rounded-md grayscale"
-            />
-            <span className="w-full absolute h-full left-0 bg-gradient-to-l from-black to-transparent"></span>
-          </div>
-          <div className="relative xl:absolute" ref={image1.ref}>
-            <Image
-              src="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/bg-mobile.jpg"
-              alt=""
-              width={700}
-              height={800}
-              className="w-full object-cover rounded-md"
-            />
-            <span className="w-full absolute h-full left-0 bg-gradient-to-tr from-black to-transparent"></span>
-          </div>
+          <DoubleImage
+            image1="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/image-1.jpg"
+            image2="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/bg-mobile.jpg"
+          />
         </div>
       </div>
     </div>

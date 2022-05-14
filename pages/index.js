@@ -1,12 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import { useParallax } from "react-scroll-parallax";
 import About from "../components/About";
+import Event from "../components/Event";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
+import Map from "../components/Map";
 import Quotes from "../components/Quotes";
 import Reservation from "../components/Reservation";
-import ReservationForm from "../components/ReservationForm";
 
 export default function Home() {
   return (
@@ -42,6 +41,8 @@ export default function Home() {
         nickname="Ilham"
         additional="Putra ke 2 dari"
       />
+
+      <Event />
 
       <Reservation />
     </div>

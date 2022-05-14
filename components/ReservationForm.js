@@ -6,13 +6,9 @@ import { useRouter } from "next/router";
 
 const ReservationForm = ({ params }) => {
   const [isSuccess, setIsSuccess] = useState(false);
-  const [guests, setGuests] = useState([]);
-
-  function addToGuest(data) {
-    setGuests([...guests, data]);
-  }
 
   const router = useRouter();
+  const { to } = router.query;
 
   const formik = useFormik({
     initialValues: {
@@ -41,7 +37,6 @@ const ReservationForm = ({ params }) => {
         body: JSON.stringify(data),
       }).then(() => {
         setIsSuccess(true);
-        addToGuest(data);
       });
 
       formik.resetForm();
@@ -70,29 +65,6 @@ const ReservationForm = ({ params }) => {
                 <p className="text-sm text-white">{guest.message}</p>
               </div>
               <div className="inline-flex items-center text-base font-semibold">
-                {guest.isAttending ? (
-                  <span className="bg-green-500 p-2 rounded-full text-sm text-white leading-none">
-                    Hadir
-                  </span>
-                ) : (
-                  <span className="bg-red-500 p-2 rounded-full text-sm text-white leading-none">
-                    Tidak hadir
-                  </span>
-                )}
-              </div>
-            </div>
-          </li>
-        ))}
-        {guests.map((guest) => (
-          <li key={guest.name} className="py-3 sm:py-4">
-            <div className="flex items-center space-x-4">
-              <div className="flex-1 min-w-0">
-                <p className="text-xl mb-2 font-medium truncate text-white">
-                  {guest.name}
-                </p>
-                <p className="text-sm text-white">{guest.message}</p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-white">
                 {guest.isAttending ? (
                   <span className="bg-green-500 p-2 rounded-full text-sm text-white leading-none">
                     Hadir
