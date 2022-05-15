@@ -20,7 +20,7 @@ function Event() {
           location="Villa Lagenta, Lembang"
           sesi1="16:00 WIB"
           sesi2="18:00 WIB"
-          image="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/BHM03770.jpg"
+          image="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/BHM04156.JPG"
         />
       </div>
     </div>
