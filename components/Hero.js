@@ -26,7 +26,7 @@ function Hero() {
             <h1 className="text-6xl xl:text-8xl font-heading">
               Yulian & Ilham
             </h1>
-            <h3 className="text-2xl">Are getting married</h3>
+            <h3 className="text-2xl">Are getting married. Yay!</h3>
           </div>
           <div className="xl:pl-20">
             <p className="text-xl">Save the date</p>
