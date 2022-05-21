@@ -5,7 +5,7 @@ import EventItem from "./EventItem";
 
 function Event() {
   return (
-    <div className="h-min-screen bg-black flex items-center  xl:py-32">
+    <div className="h-min-screen bg-black flex items-center  xl:py-32 ">
       <div className="container max-w-4xl mx-auto relative grid xl:grid-cols-2 grid-cols-1 gap-10 px-5 xl:px-0">
         <EventItem
           title="Akad"

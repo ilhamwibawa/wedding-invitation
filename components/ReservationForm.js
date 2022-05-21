@@ -153,7 +153,7 @@ const ReservationForm = ({ params }) => {
             disabled={formik.isSubmitting ? true : false}
             type="submit"
           >
-            {formik.isSubmitting ? "Submitting..." : "Submit"}
+            {formik.isSubmitting ? "Submitting..." : "SEND WISH"}
           </button>
         </div>
       </form>
