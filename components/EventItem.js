@@ -1,11 +1,15 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useParallax } from "react-scroll-parallax";
 
 function EventItem({ reverse, title, date, location, sesi1, sesi2, image }) {
   const textParallax = useParallax({
     speed: -10,
   });
+
+  const router = useRouter();
+  const { s } = router.query;
   return (
     <div
       className={`flex flex-col xl:flex-row relative ${
@@ -34,14 +38,18 @@ function EventItem({ reverse, title, date, location, sesi1, sesi2, image }) {
           </a>
           {sesi1 && sesi2 && (
             <div className="flex gap-10">
-              <div className="flex flex-col items-center">
-                <p className="text-3xl font-heading">Sesi 1</p>
-                <p className="text-xl">{sesi1}</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <p className="text-3xl font-heading">Sesi 2</p>
-                <p className="text-xl">{sesi2}</p>
-              </div>
+              {s === "1" && (
+                <div className="flex flex-col items-center">
+                  <p className="text-3xl font-heading">Sesi 1</p>
+                  <p className="text-xl">{sesi1}</p>
+                </div>
+              )}
+              {s === "2" && (
+                <div className="flex flex-col items-center">
+                  <p className="text-3xl font-heading">Sesi 2</p>
+                  <p className="text-xl">{sesi2}</p>
+                </div>
+              )}
             </div>
           )}
         </div>

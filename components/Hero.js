@@ -1,6 +1,9 @@
 import React from "react";
-
+import { useRouter } from "next/router";
 function Hero() {
+  const router = useRouter();
+  const { s } = router.query;
+
   return (
     <div className="relative h-screen overflow-hidden">
       <div className="absolute w-full h-full top-0 left-0 -z-10">
@@ -34,7 +37,11 @@ function Hero() {
               Sabtu, 18 Juni 2022
             </p>
             <p className="text-xl">di Villa Lagenta, Lembang</p>
-            <p className="text-xl">Jam 18.00</p>
+            {s === "1" ? (
+              <p className="text-xl">Jam 16.00</p>
+            ) : (
+              <p className="text-xl">Jam 18.00</p>
+            )}
             <a
               target="_blank"
               rel="noreferrer"

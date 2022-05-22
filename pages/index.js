@@ -40,7 +40,7 @@ export default function Home() {
         reverse
         title="He's the one"
         desc="She knew she loved him when 'home' went from being a place to being a person."
-        url="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/ilham-duduk-sendiri.JPG"
+        url="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/ilham-sendiri-aja.png"
         fullname="Ilham Mirwansyah W"
         mother="Yani Yuningsih"
         father="Hadiana Rusady"
@@ -52,7 +52,7 @@ export default function Home() {
 
       <DressCode />
 
-      {/* <Prokes /> */}
+      <Prokes />
 
       <Gallery />
 

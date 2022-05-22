@@ -13,7 +13,7 @@ const ReservationForm = ({ params }) => {
   const formik = useFormik({
     initialValues: {
       name: "",
-      isAttending: false,
+      isAttending: true,
       message: "",
     },
     validationSchema: Yup.object({
@@ -103,7 +103,7 @@ const ReservationForm = ({ params }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
-            className=" form-input text-black"
+            className=" form-input text-black  rounded-md border-none"
           />
           {formik.touched.name && formik.errors.name ? (
             <div>{formik.errors.name}</div>
@@ -119,7 +119,7 @@ const ReservationForm = ({ params }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.isAttending}
-            className="form-select text-black"
+            className="form-select text-black  rounded-md border-none"
           >
             <option value={true}>Ya</option>
             <option value={false}>Tidak</option>
@@ -140,7 +140,7 @@ const ReservationForm = ({ params }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}
-            className="form-textarea text-black"
+            className="form-textarea text-black rounded-md border-none"
           />
           {formik.touched.message && formik.errors.message ? (
             <div>{formik.errors.message}</div>

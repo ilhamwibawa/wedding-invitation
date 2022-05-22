@@ -6,7 +6,9 @@ function DressCode() {
 
   return (
     <div className="h-min-screen">
-      <h1 className="text-center font-heading text-6xl mb-10">Attire</h1>
+      <h1 className="text-center font-heading text-5xl xl:text-6xl xl:mb-10">
+        Attire
+      </h1>
       <p className="text-center max-w-lg mx-auto pb-10 px-5">
         We kindly request our guests to wear these colors to our special day
       </p>
