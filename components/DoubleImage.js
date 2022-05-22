@@ -15,6 +15,7 @@ function DoubleImage({ image1, image2 }) {
           width={700}
           height={800}
           className="w-full object-cover rounded-md grayscale"
+          priority
         />
         <span className="w-full absolute h-full left-0 bg-gradient-to-l from-black to-transparent"></span>
       </div>
@@ -25,6 +26,7 @@ function DoubleImage({ image1, image2 }) {
           width={700}
           height={800}
           className="w-full object-cover rounded-md"
+          priority
         />
         <span className="w-full absolute h-full left-0 bg-gradient-to-tr from-black to-transparent"></span>
       </div>

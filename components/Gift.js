@@ -28,6 +28,9 @@ function Gift() {
               alt="qr code"
               className="object-cover rounded-lg"
             />
+
+            <p className="text-black text-center">Yulian Rahmawati</p>
+            <p className="text-black text-center">1370096755</p>
           </div>
         </div>
         <div className="flex flex-col max-w-lg">

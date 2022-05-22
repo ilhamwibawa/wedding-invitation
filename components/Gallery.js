@@ -26,7 +26,7 @@ function Gallery() {
   return (
     <div className="h-min-screen xl:py-52 py-32 bg-black relative">
       <div className="mx-auto container relative">
-        <h1 className=" text-6xl xl:text-8xl font-heading absolute -top-12 z-10">
+        <h1 className=" text-6xl xl:text-8xl font-heading absolute -top-12 z-10 px-5">
           Gallery
         </h1>
       </div>
@@ -43,11 +43,8 @@ function Gallery() {
         }}
         breakpoints={{
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
-            grid: {
-              rows: 2,
-            },
           },
           768: {
             slidesPerView: 2,
@@ -67,6 +64,7 @@ function Gallery() {
               width={600}
               className="object-cover rounded-sm xl:rounded-lg"
               alt=""
+              priority
             />
           </SwiperSlide>
         ))}

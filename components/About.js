@@ -49,6 +49,7 @@ function About({
               width={700}
               height={800}
               className="w-full object-cover rounded-md grayscale hover:grayscale-0 focus:grayscale-0 transition-all"
+              priority
             />
           </div>
           <div

@@ -53,6 +53,7 @@ function EventItem({ reverse, title, date, location, sesi1, sesi2, image }) {
           width={500}
           height={600}
           className="object-cover grayscale  transition-all rounded-md"
+          priority
         />
       </div>
     </div>

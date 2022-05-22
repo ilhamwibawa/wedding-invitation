@@ -10,6 +10,8 @@ import Reservation from "../components/Reservation";
 import Image from "next/image";
 import Gift from "../components/Gift";
 import Gallery from "../components/Gallery";
+import DressCode from "../components/DressCode";
+import Prokes from "../components/Prokes";
 
 export default function Home() {
   return (
@@ -28,7 +30,7 @@ export default function Home() {
         desc="And in her smile, I see something more beautiful than the stars."
         url="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/BHM03951.JPG"
         fullname="Yulian Rahmawati"
-        mother="Een Juendah (alm)"
+        mother="Een Juendah (almh)"
         father="Yayan Supriatna (alm)"
         nickname="Kijul"
         additional="Putri ke 3 dari"
@@ -48,9 +50,13 @@ export default function Home() {
 
       <Event />
 
-      <Gift />
+      <DressCode />
+
+      {/* <Prokes /> */}
 
       <Gallery />
+
+      <Gift />
 
       <Reservation />
       <footer className="bg-black p-2 flex items-center justify-center">

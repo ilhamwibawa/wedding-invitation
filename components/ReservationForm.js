@@ -149,7 +149,7 @@ const ReservationForm = ({ params }) => {
 
         <div>
           <button
-            className="bg-black p-3 mt-5 text-white inline-block items-center justify-center transition-all hover:border-white border-[1px] border-transparent cursor-pointer"
+            className="bg-white p-3 mt-5 text-black inline-block items-center justify-center transition-all hover:border-white border-[1px] border-transparent cursor-pointer"
             disabled={formik.isSubmitting ? true : false}
             type="submit"
           >

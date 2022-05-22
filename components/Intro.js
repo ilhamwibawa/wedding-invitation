@@ -85,6 +85,7 @@ function Intro() {
           layout="fill"
           alt=""
           className=" object-cover grayscale -z-10 opacity-60"
+          priority
         />
         <div className="absolute h-full w-full bg-gradient-to-l from-[#161513] to-transparent top-0 left-0"></div>
       </div>
