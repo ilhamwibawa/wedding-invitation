@@ -34,9 +34,9 @@ function Hero() {
           <div className="xl:pl-20">
             <p className="text-xl">Save the date</p>
             <p className="text-4xl xl:text-6xl font-heading my-5">
-              Sabtu, 18 Juni 2022
+              Saturday, 18 June 2022
             </p>
-            <p className="text-xl">di Villa Lagenta, Lembang</p>
+            <p className="text-xl">at Villa Lagenta, Lembang</p>
             {s === "1" ? (
               <p className="text-xl">Jam 16.00</p>
             ) : (

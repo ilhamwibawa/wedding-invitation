@@ -15,12 +15,12 @@ function Gallery() {
 
   const images = [
     "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-1.jpg",
-    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-2.jpg",
     "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-3.jpg",
-    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-4.jpg",
+    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-2.jpg",
     "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-5.jpg",
-    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-6.jpg",
+    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-4.jpg",
     "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-7.jpg",
+    "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-6.jpg",
     "https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/gallery-8.jpg",
   ];
   return (

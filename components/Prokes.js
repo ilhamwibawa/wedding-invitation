@@ -5,7 +5,7 @@ function Prokes() {
   return (
     <div className="h-min-screen xl:py-32 py-32">
       <h1 className="text-center font-heading text-4xl xl:text-6xl mb-10">
-        Health Protocols 🙄
+        Health Protocols
       </h1>
 
       <div className="xl:flex grid grid-cols-2 items-center justify-center gap-3 xl:gap-5 px-5">

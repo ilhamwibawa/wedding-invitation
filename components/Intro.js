@@ -22,11 +22,17 @@ function Intro() {
   };
 
   const router = useRouter();
-  const { to } = router.query;
+  const { to, f } = router.query;
 
-  const line1 = `Hello, ${to}.`;
-  const line2 = "Berita baik!";
-  const line3 = "Ilham akhirnya nikahin Kijul :)";
+  let line1 = `Hello, ${to}.`;
+  let line2 = "Berita baik!";
+  let line3 = "Ilham akhirnya nikahin Kijul :)";
+
+  if (f) {
+    line1 = `Dear, ${to},`;
+    line2 = "You are invited";
+    line3 = "to our wedding celebration";
+  }
 
   const [isOpen, setIsOpen] = useState(true);
 
@@ -123,7 +129,7 @@ function Intro() {
         </motion.h3>
         <motion.button
           variants={button}
-          initial="hidden"
+          initial={`${f === true} ? "hidden" : "visible"`}
           animate="visible"
           className="bg-black p-3 mt-5 text-white flex items-center justify-center transition-all hover:border-white border-[1px] border-transparent cursor-pointer"
           onClick={handleClick}

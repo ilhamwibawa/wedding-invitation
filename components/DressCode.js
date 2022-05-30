@@ -2,12 +2,12 @@ import React from "react";
 import { useParallax } from "react-scroll-parallax";
 
 function DressCode() {
-  const colors = ["#cfcfc7", "#b8a49b", "#aa6e63", "#7f5954"];
+  const colors = ["#ffffff", "#dac5a6"];
 
   return (
     <div className="h-min-screen">
       <h1 className="text-center font-heading text-5xl xl:text-6xl xl:mb-10">
-        Attire
+        Dress Code
       </h1>
       <p className="text-center max-w-lg mx-auto pb-10 px-5">
         We kindly request our guests to wear these colors to our special day
