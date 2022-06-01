@@ -62,16 +62,9 @@ export default function Home() {
 
       <Event />
 
-      <div
-        className=" bg-no-repeat bg-right"
-        style={{
-          backgroundImage: `url("https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/flowers.png")`,
-        }}
-      >
-        <DressCode />
+      <DressCode />
 
-        <Prokes />
-      </div>
+      <Prokes />
 
       <Gallery />
 
