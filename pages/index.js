@@ -17,9 +17,21 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Wedding Ilham & Kijul</title>
-        <meta name="description" content="Wedding of Kijul & Ilham" />
+        <title>The Wedding of Yulian - Ilham</title>
+        <meta name="description" content="The wedding of Yulian &#38; Ilham" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Whatsapp */}
+        <meta property="og:title" content="" />
+        <meta
+          property="og:description"
+          content="The wedding of Yulian &#38; Ilham. We invite you to join us for our wedding celebration & we are looking forward to your presence."
+        />
+        <meta
+          property="og:image"
+          content="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/image-1.jpg"
+        />
+        <meta property="og:url" content="https://kijul-ilham.online/" />
+        <meta property="og:type" content="website" />
       </Head>
       <Intro />
       <Hero />
@@ -50,9 +62,16 @@ export default function Home() {
 
       <Event />
 
-      <DressCode />
+      <div
+        className=" bg-no-repeat bg-right"
+        style={{
+          backgroundImage: `url("https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/flowers.png")`,
+        }}
+      >
+        <DressCode />
 
-      <Prokes />
+        <Prokes />
+      </div>
 
       <Gallery />
 
