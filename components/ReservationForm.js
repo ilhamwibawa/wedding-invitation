@@ -3,9 +3,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import useSWR from "swr";
 import { useRouter } from "next/router";
+import moment from "moment";
 
 const ReservationForm = ({ params }) => {
   const [isSuccess, setIsSuccess] = useState(false);
+  const [guests, setGuests] = useState([]);
 
   const router = useRouter();
   const { to } = router.query;
@@ -25,7 +27,10 @@ const ReservationForm = ({ params }) => {
       console.log(values);
       const data = {
         name: values.name,
-        isAttending: values.isAttending === "true" ? true : false,
+        isAttending:
+          values.isAttending === "true" || values.isAttending === true
+            ? true
+            : false,
         message: values.message,
       };
 
@@ -37,6 +42,16 @@ const ReservationForm = ({ params }) => {
         body: JSON.stringify(data),
       }).then(() => {
         setIsSuccess(true);
+
+        // add id to data
+        const newData = {
+          ...data,
+          id: Math.random().toString(36).substr(2, 9),
+          updatedAt: moment().format("YYYY-MM-DD HH:mm:ss"),
+        };
+
+        // add data to guests
+        setGuests((prev) => [newData, ...prev]);
       });
 
       formik.resetForm();
@@ -46,6 +61,13 @@ const ReservationForm = ({ params }) => {
   const { data, error } = useSWR("/api/reservation", (url) =>
     fetch(url).then((r) => r.json())
   );
+
+  useEffect(() => {
+    if (data) {
+      setGuests(data);
+    }
+  }, [data]);
+
   if (error) return <div>An error occured.</div>;
   if (!data) return <div>Loading ...</div>;
 
@@ -55,7 +77,7 @@ const ReservationForm = ({ params }) => {
         role="list"
         className="divide-y divide-[rgba(255,255,255,0.5)] max-h-[300px] overflow-y-scroll mb-10 border-[rgba(255,255,255,0.5)] border-[1px] p-3 scrollbar-thin scrollbar-track-white scrollbar-thumb-black"
       >
-        {data.map((guest) => (
+        {guests.map((guest) => (
           <li key={guest.id} className="py-3 sm:py-4">
             <div className="flex items-center space-x-4">
               <div className="flex-1 min-w-0">
@@ -63,6 +85,9 @@ const ReservationForm = ({ params }) => {
                   {guest.name}
                 </p>
                 <p className="text-sm text-white">{guest.message}</p>
+                <p className="text-[10px] text-gray-600 mt-2">
+                  {moment(guest.updatedAt).format("DD-MM-YYYY")}
+                </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold">
                 {guest.isAttending ? (

@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 
 function Gift() {
   const [isOpen, setIsOpen] = useState(false);
+  const titleMotion = useParallax({
+    speed: 10,
+  });
 
   const modal = {
     hidden: { display: "none" },
@@ -25,20 +28,22 @@ function Gift() {
           backgroundImage: `url("https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/flowers.png")`,
         }}
       >
-        <h1 className="font-heading text-3xl xl:text-5xl text-center mb-10">
-          Wedding Gift
-        </h1>
-        <p className="mb-20 max-w-lg text-center mx-auto px-5">
-          Your presence is the best gift we could hope for. However if you
-          intend to send another wedding gift, you can via the link below:
-        </p>
-        <div className="text-center">
-          <button
-            className="bg-white text-black font-heading text-lg px-5 py-3 rounded-lg"
-            onClick={() => setIsOpen(true)}
-          >
-            Wedding gift
-          </button>
+        <div ref={titleMotion.ref}>
+          <h1 className="font-heading text-3xl xl:text-5xl text-center mb-10">
+            Wedding Gift
+          </h1>
+          <p className="mb-20 max-w-lg text-center mx-auto px-5">
+            Your presence is the best gift we could hope for. However if you
+            intend to send another wedding gift, you can via the link below:
+          </p>
+          <div className="text-center">
+            <button
+              className="bg-white text-black font-heading text-lg px-5 py-3 rounded-lg"
+              onClick={() => setIsOpen(true)}
+            >
+              Wedding gift
+            </button>
+          </div>
         </div>
       </div>
       {/* Gift modal */}
@@ -79,7 +84,7 @@ function Gift() {
                 </h3>
                 <div className="mt-2">
                   <div className="bg-white p-10 z-10 top-20">
-                    <div className="p-4 bg-white rounded-lg">
+                    <div className="p-4 bg-white rounded-lg text-center">
                       <Image
                         src="https://wedding-invitation-ilham-kijul.s3.ap-southeast-1.amazonaws.com/qr.jpeg"
                         width={300}
@@ -87,7 +92,7 @@ function Gift() {
                         alt="qr code"
                         className="object-cover rounded-lg"
                       />
-
+                      <p className="text-black text-center font-bold">BCA</p>
                       <p className="text-black text-center">Yulian Rahmawati</p>
                       <p className="text-black text-center">1370096755</p>
                     </div>

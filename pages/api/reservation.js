@@ -14,7 +14,13 @@ export default async function handler(req, res) {
   }
 
   if (req.method === "GET") {
-    const reservations = await prisma.reservation.findMany();
+    const reservations = await prisma.reservation.findMany({
+      orderBy: [
+        {
+          updatedAt: "desc",
+        },
+      ],
+    });
     res.json(reservations);
   }
 }

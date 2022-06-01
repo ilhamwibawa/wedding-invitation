@@ -38,9 +38,9 @@ function Hero() {
             </p>
             <p className="text-xl">at Villa Lagenta, Lembang</p>
             {s === "1" ? (
-              <p className="text-xl">Jam 16.00</p>
+              <p className="text-xl">Jam 16.00 WIB</p>
             ) : (
-              <p className="text-xl">Jam 18.00</p>
+              <p className="text-xl">Jam 18.30 WIB</p>
             )}
             <a
               target="_blank"
